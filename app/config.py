@@ -14,8 +14,8 @@ class Settings(BaseSettings):
     supabase_key: str
 
     # 🤖 Models
-    medium_model: str = "openai/gpt-5"
-    strong_model: str = "openai/gpt-5"
+    medium_model: str = "meta-llama/llama-4-scout"
+    strong_model: str = "meta-llama/llama-4-scout"
     format_model: str = "meta-llama/llama-4-scout"
 
     # ⚙️ App config
@@ -36,3 +36,4 @@ class Settings(BaseSettings):
 @lru_cache(maxsize=1)
 def get_settings() -> Settings:
     return Settings()
+
